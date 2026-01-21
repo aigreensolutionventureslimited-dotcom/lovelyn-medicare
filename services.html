@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Clinical Services Abuja | Infection Treatment & Detox | Lovelyn Medicare</title>
+    <meta name="description" content="Specialized home-based clinical treatments in Abuja. Infection protocols (Staph, Gonorrhea, UTI), ₦120k Full Body Detoxification, and ₦15k Medical Consultations.">
+    <meta name="keywords" content="Staphylococcus treatment Abuja, Gonorrhea cure Abuja, Candidiasis treatment FCT, UTI specialist Abuja, Full body detox Abuja, Malaria treatment home visit">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007E85;
+            --secondary: #E0F2F1;
+            --text-dark: #1A1C1E;
+            --text-light: #6C757D;
+            --white: #FFFFFF;
+            --shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #fdfdfd; overflow-x: hidden; padding-top: 80px; }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px 7%;
+            background: rgba(255,255,255,0.9); backdrop-filter: blur(15px);
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo { font-family: 'Plus Jakarta Sans'; font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 30px; font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .page-header {
+            padding: 80px 7% 40px;
+            background: linear-gradient(rgba(0,126,133,0.05), rgba(255,255,255,1));
+            text-align: center;
+        }
+        .page-header h1 { font-family: 'Plus Jakarta Sans'; font-size: 2.5rem; color: #0a2d2f; margin-bottom: 15px; }
+
+        .services-section { padding: 40px 7% 100px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+
+        .creative-card {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 40px;
+            border: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: 0.4s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .creative-card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-color: var(--primary); }
+
+        .service-img {
+            width: 100%; height: 180px; object-fit: cover;
+            border-radius: 20px; margin-bottom: 25px;
+        }
+
+        .card-title { font-family: 'Plus Jakarta Sans'; font-size: 1.4rem; margin-bottom: 15px; color: #0a2d2f; }
+        .card-text { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; flex-grow: 1; }
+        
+        .price-badge {
+            display: inline-block; background: var(--secondary); color: var(--primary);
+            padding: 8px 16px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;
+        }
+
+        /* --- Modal Styling --- */
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7); display: none; align-items: center;
+            justify-content: center; z-index: 2000; padding: 20px; backdrop-filter: blur(5px);
+        }
+
+        .modal {
+            background: white; padding: 40px; border-radius: 30px;
+            max-width: 600px; width: 100%; position: relative;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .close-modal { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; color: var(--text-light); }
+        .modal h2 { font-family: 'Plus Jakarta Sans'; margin-bottom: 20px; color: var(--primary); }
+        .modal ul { margin: 20px 0; padding-left: 20px; color: var(--text-light); list-style: none; }
+        .modal ul li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+
+        .btn-book {
+            display: block; width: 100%; text-align: center;
+            background: var(--primary); color: white; padding: 18px;
+            border-radius: 12px; text-decoration: none; font-weight: 700;
+            margin-top: 25px; transition: 0.3s;
+        }
+        .btn-book:hover { opacity: 0.9; transform: scale(1.02); }
+
+        footer { padding: 60px 7%; background: #1A1C1E; color: white; text-align: center; }
+
+        @media (max-width: 768px) { .nav-links { display: none; } .page-header h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">LOVELYN<span>MEDICARE</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html" style="color: var(--primary); font-weight: 700;">Services</a>
+            <a href="book.html">Book Now</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Abuja Clinical Services & Pricing</h1>
+        <p>Expert clinical care for infections, wellness, and detoxification across the FCT.</p>
+    </header>
+
+    <main class="services-section">
+        <div class="services-grid">
+            
+            <div class="creative-card" onclick="showPricing('Infection Treatment Protocols', 'Based on Diagnosis', ['Staphylococcus Aureus', 'Gonorrhea Clinical Care', 'Candidiasis Management', 'Urinary Tract Infection (UTI)'])">
+                <img src="https://th.bing.com/th/id/R.f13d5ba8f23571bb31f80a02269abff4?rik=wkPHWXLVKZ24nA&pid=ImgRaw&r=0" class="service-img" alt="Infection Treatment Abuja">
+                <h3 class="card-title">Infection Treatment</h3>
+                <p class="card-text">Discreet and intensive clinical protocols for persistent infections. We handle Staph, Gonorrhea, and UTIs with absolute privacy in your home.</p>
+                <span class="price-badge">View Details</span>
+            </div>
+
+            <div class="creative-card" onclick="showPricing('Full Body Detoxification', '₦120,000', ['Metabolic System Flush', 'Toxin Removal Protocol', 'Cellular Revitalization', 'Clinical Vitality Support'])">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=500&q=80" class="service-img" alt="Full Body Detox Abuja">
+                <h3 class="card-title">Full Body Detoxification</h3>
+                <p class="card-text">A premium clinical program designed to flush toxins and restore metabolic balance. The gold standard for detoxification in Abuja.</p>
+                <span class="price-badge">₦120,000</span>
+            </div>
+
+            <div class="creative-card" onclick="showPricing('Counseling & Consultation', '₦15,000', ['Professional Medical Guidance', 'Health Status Mapping', 'Wellness Counseling', 'Strict Confidentiality'])">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" class="service-img" alt="Medical Consultation Abuja">
+                <h3 class="card-title">Counseling & Consultation</h3>
+                <p class="card-text">Professional medical guidance with our board-certified clinical staff. Secure your ₦15,000 private assessment today.</p>
+                <span class="price-badge">₦15,000</span>
+            </div>
+
+            <div class="creative-card" onclick="showPricing('Minor Illness Management', 'Flexible Pricing', ['Malaria Recovery Protocol', 'Typhoid Clinical Support', 'General Fever Management', 'Home Nursing Support'])">
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=500&q=80" class="service-img" alt="Malaria Treatment Abuja">
+                <h3 class="card-title">Minor Illnesses</h3>
+                <p class="card-text">Rapid recovery plans for Malaria, Typhoid, and common clinical ailments. Professional care without the hospital queue.</p>
+                <span class="price-badge">View Details</span>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="overlay" id="priceOverlay">
+        <div class="modal">
+            <span class="close-modal" onclick="closePricing()">&times;</span>
+            <h2 id="modalTitle">Service Title</h2>
+            <p style="font-weight: 700; font-size: 1.2rem; color: var(--text-dark);">Price/Rate: <span id="modalPrice" style="color: var(--primary);"></span></p>
+            <div id="modalDetails"></div>
+            <a href="book.html" class="btn-book">Proceed to Book Appointment</a>
+        </div>
+    </div>
+
+    <footer>
+        <h2 style="font-family: 'Plus Jakarta Sans'; margin-bottom: 10px;">LOVELYN MEDICARE</h2>
+        <p style="opacity: 0.6; font-size: 0.9rem;">Board-Certified Clinical Care | Abuja, Nigeria</p>
+        <p style="opacity: 0.4; font-size: 0.7rem; margin-top: 20px;">&copy; 2026 Lovelyn Medicare. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showPricing(title, price, details) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            
+            let listHtml = "<ul>";
+            details.forEach(item => {
+                listHtml += `<li><span style="color:var(--primary)">✔</span> ${item}</li>`;
+            });
+            listHtml += "</ul>";
+            
+            document.getElementById('modalDetails').innerHTML = listHtml;
+            document.getElementById('priceOverlay').style.display = 'flex';
+        }
+
+        function closePricing() {
+            document.getElementById('priceOverlay').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('priceOverlay')) {
+                closePricing();
+            }
+        }
+    </script>
+
+</body>
+</html>
