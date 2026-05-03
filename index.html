@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Lovelyn Medicare!!! | Premium Clinical Home Care Abuja</title>
+    <title>Lovelyn Medicare | Premium Clinical Home Care Abuja</title>
     <meta name="description" content="Abuja's leading clinical home care. Specialized Infection Treatment (Staph, UTI, Gonorrhea), 120k Full Body Detox, and private nursing across Maitama, Asokoro, and FCT.">
     <meta name="keywords" content="Infection treatment Abuja, Full Body Detox Abuja, Staphylococcus treatment Abuja, Home nursing Abuja, Clinical consultation Abuja, Lovelyn Medicare">
     
+    <!-- Open Graph for Social Trust -->
     <meta property="og:title" content="Lovelyn Medicare | Clinical Excellence at Home">
     <meta property="og:description" content="Board-certified medical care delivered to your doorstep in Abuja. Privacy and clinical results guaranteed.">
-    <meta property="og:image" content="https://lovelynmedicare.com/og-image.jpg">
     
+    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,9 +30,12 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
         :root {
             --primary: #007E85;
+            --primary-dark: #005f63;
             --secondary: #E0F2F1;
             --text-dark: #1A1C1E;
             --text-light: #6C757D;
@@ -48,43 +52,63 @@
             background: transparent; display: flex; justify-content: space-between; align-items: center;
             z-index: 1000; transition: 0.4s;
         }
-        nav.scrolled { background: rgba(255,255,255,0.98); padding: 15px 7%; border-bottom: 1px solid #EEE; }
+        nav.scrolled { background: rgba(255,255,255,0.98); padding: 15px 7%; border-bottom: 1px solid #EEE; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .logo { font-family: 'Plus Jakarta Sans'; font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none; cursor: pointer; }
         nav.scrolled .logo { color: var(--primary); }
-        .nav-links a { text-decoration: none; color: white; margin-left: 30px; font-weight: 600; transition: 0.3s; }
+        .nav-links a { text-decoration: none; color: white; margin-left: 30px; font-weight: 600; transition: 0.3s; font-size: 0.95rem; }
         nav.scrolled .nav-links a { color: var(--text-dark); }
+        nav.scrolled .nav-links a:hover { color: var(--primary); }
 
-        /* --- Hero --- */
+        /* --- Hero Section --- */
         .hero-container {
-            position: relative; height: 90vh; width: 100%; display: flex;
+            position: relative; height: 95vh; width: 100%; display: flex;
             align-items: center; justify-content: center; overflow: hidden; color: white; background: #000;
         }
         .hero-video {
             position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
             transform: translate(-50%, -50%); z-index: 1; filter: brightness(0.4); object-fit: cover;
         }
-        .hero-content { text-align: center; max-width: 900px; padding: 0 7%; z-index: 10; }
-        .hero-content h1 { font-family: 'Plus Jakarta Sans'; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
-        .hero-content p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px; }
+        .hero-content { text-align: center; max-width: 1000px; padding: 0 7%; z-index: 10; }
+        .hero-content h1 { font-family: 'Plus Jakarta Sans'; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
+        .hero-content p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 45px; max-width: 800px; margin-inline: auto; line-height: 1.6; }
 
-        /* --- Accreditations --- */
+        /* --- Buttons --- */
+        .btn-main { background: var(--primary); color: white; padding: 20px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,126,133,0.3); background: var(--primary-dark); }
+
+        /* --- Accreditations. --- */
         .partners { padding: 60px 7%; background: #F9FAFB; text-align: center; border-bottom: 1px solid #eee; }
-        .partners h3 { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; }
-        .partner-logos { display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap; color: #333; font-weight: 800; font-size: 1rem; }
+        .partners h3 { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 35px; font-weight: 600; }
+        .partner-logos { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; color: #444; font-weight: 700; font-size: 0.9rem; }
+        .partner-logos div { display: flex; align-items: center; gap: 10px; }
 
-        /* --- Excellence Section --- */
-        .excellence { padding: 100px 7%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        /* --- Excellence Section. --- */
+        .excellence { padding: 120px 7%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .excellence-img { position: relative; }
         .excellence-img img { width: 100%; border-radius: 40px; box-shadow: var(--shadow); }
-        .excellence-text h2 { font-family: 'Plus Jakarta Sans'; font-size: 2.5rem; margin-bottom: 25px; }
+        .excellence-text span { color: var(--primary); font-weight: 800; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 15px; }
+        .excellence-text h2 { font-family: 'Plus Jakarta Sans'; font-size: 2.8rem; margin-bottom: 30px; line-height: 1.2; color: #0a2d2f; }
+        .excellence-text p { margin-bottom: 30px; color: var(--text-light); line-height: 1.8; font-size: 1.05rem; }
 
-        /* --- Privacy/About Footer Prep --- */
-        .info-footer { padding: 60px 7%; background: #f8f9fa; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .feature-item { margin-bottom: 25px; display: flex; align-items: center; gap: 20px; }
+        .feature-icon { background: var(--secondary); padding: 15px; border-radius: 15px; font-size: 1.5rem; color: var(--primary); }
 
-        .btn-main { background: var(--primary); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
-        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,126,133,0.3); }
+        /* --- Info Footer. --- */
+        .info-footer { padding: 80px 7%; background: #f8f9fa; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .info-footer h4 { color: var(--primary); margin-bottom: 20px; font-family: 'Plus Jakarta Sans'; font-size: 1.3rem; }
+        .info-footer p { font-size: 1rem; color: var(--text-light); line-height: 1.7; }
 
-        footer { padding: 60px 7%; background: #111; color: white; text-align: center; }
-        @media (max-width: 992px) { .excellence { grid-template-columns: 1fr; text-align: center; } .nav-links { display: none; } }
+        footer { padding: 80px 7%; background: #111; color: white; text-align: center; }
+        footer h2 { font-family: 'Plus Jakarta Sans'; font-size: 1.8rem; margin-bottom: 15px; }
+        footer p { opacity: 0.5; font-size: 0.9rem; }
+
+        @media (max-width: 992px) { 
+            .excellence { grid-template-columns: 1fr; text-align: center; padding: 80px 7%; } 
+            .excellence-text h2 { font-size: 2.2rem; }
+            .nav-links { display: none; } 
+            .info-footer { grid-template-columns: 1fr; text-align: center; }
+            .feature-item { justify-content: center; }
+        }
     </style>
 </head>
 <body>
@@ -98,71 +122,80 @@
         </div>
     </nav>
 
+    <!-- Hero Section. -->
     <section class="hero-container">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="https://image2url.com/r2/default/videos/1768510100849-dee60881-0ba8-4c50-ac91-ea9c5a958200.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
-            <h1>Specialized Infection Treatment & Clinical Care in Abuja.</h1>
-            <p>Discreet, board-certified clinical care delivered to your home. We specialize in persistent infections, full-body detoxification, and professional health consultations.</p>
-            <a href="services.html" class="btn-main">View Our Clinical Services</a>
+            <h1>Advanced Clinical Care Delivered to Your Home.</h1>
+            <p>Discreet, board-certified medical expertise in Abuja. We specialize in persistent infection protocols, premium detoxification, and professional health consultations.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="services.html" class="btn-main">Explore Services</a>
+                <a href="book.html" class="btn-main" style="background: white; color: var(--primary);">Schedule Visit</a>
+            </div>
         </div>
     </section>
 
+    <!-- Accreditation Bar. -->
     <section class="partners">
         <h3>Regulated & Accredited By</h3>
         <div class="partner-logos">
-            <div>🇳🇬 COMMUNITY HEALTH REGISTRATION BOARD OF NIGERIA (CHRBN)</div>
-            <div>🛡️ PUBLIC HEALTH BOARD</div>
-            <div>⚕️ NIGERIA MEDICAL ASSOCIATION</div>
+            <div><i class="fa-solid fa-shield-halved text-emerald-600"></i> CHRBN NIGERIA</div>
+            <div><i class="fa-solid fa-file-medical text-blue-600"></i> PUBLIC HEALTH BOARD</div>
+            <div><i class="fa-solid fa-staff-snake text-red-600"></i> NIGERIA MEDICAL ASSOCIATION</div>
         </div>
     </section>
 
+    <!-- Excellence Section. -->
     <section class="excellence">
         <div class="excellence-img">
             <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80" alt="Clinical Excellence Abuja">
         </div>
         <div class="excellence-text">
-            <span>ABUJA'S TRUSTED CLINICAL GROUP</span>
-            <h2>Hospital-Grade Care, Without the Hospital.</h2>
-            <p style="margin-bottom: 25px; color: var(--text-light);">We bring advanced diagnostics and recovery protocols to Asokoro, Maitama, Gwarinpa, and across the FCT. Our focus is on long-term health, not just temporary fixes.</p>
+            <span>Clinical Authority in Abuja</span>
+            <h2>Hospital-Grade Results, Residential Comfort.</h2>
+            <p>We provide advanced diagnostics and recovery protocols to Asokoro, Maitama, Gwarinpa, and across the FCT.. Our focus is on clinical eradication of underlying issues, ensuring long-term wellness..</p>
             
-            <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
-                <div style="background: var(--secondary); padding: 12px; border-radius: 12px; font-size: 1.4rem;">🏥</div>
-                <div><strong>Infection Experts:</strong> Specialized protocols for Staph and UTIs.</div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-microscope"></i></div>
+                <div style="text-align: left;"><strong>Infection Specialists:</strong> Intensive protocols for Staph, UTIs, and persistent pathogens..</div>
             </div>
-            <div style="margin-bottom: 35px; display: flex; align-items: center; gap: 15px;">
-                <div style="background: var(--secondary); padding: 12px; border-radius: 12px; font-size: 1.4rem;">💎</div>
-                <div><strong>Premium Detox:</strong> Comprehensive 120k cleansing program.</div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div style="text-align: left;"><strong>Metabolic Detox:</strong> Premium ₦120,000 full-body revitalization program..</div>
             </div>
             
-            <a href="book.html" class="btn-main">Schedule Your Home Visit</a>
+            <a href="book.html" class="btn-main" style="margin-top: 20px;">Book Your Appointment</a>
         </div>
     </section>
 
+    <!-- Privacy & About. -->
     <section class="info-footer">
         <div>
-            <h4 style="color: var(--primary); margin-bottom: 15px;">About Lovelyn Medicare</h4>
-            <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.6;">Founded in Abuja, we bridge the gap between hospital excellence and home comfort. Our mission is to provide the highest standard of regulated clinical care with total patient discretion.</p>
+            <h4>The Lovelyn Standard</h4>
+            <p>Bridging the gap between elite hospital care and the privacy of your home.. We provide regulated, board-certified medical services with a commitment to excellence and rapid recovery..</p>
         </div>
         <div>
-            <h4 style="color: var(--primary); margin-bottom: 15px;">Clinical Privacy</h4>
-            <p style="font-size: 0.9rem; color: var(--text-light); line-height: 1.6;">We adhere to strict NDPR and medical confidentiality guidelines. All patient data, infection results, and home addresses are protected with the highest level of security.</p>
+            <h4>Absolute Discretion</h4>
+            <p>We adhere to strict NDPR and medical confidentiality guidelines.. Your identity, clinical results, and home address are protected by the highest level of professional security protocols..</p>
         </div>
     </section>
 
     <footer>
-        <h2 style="font-family: 'Plus Jakarta Sans';">LOVELYN MEDICARE</h2>
-        <p style="opacity: 0.5; font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Lovelyn Medicare Clinical Group. Serving Abuja FCT.</p>
+        <h2>LOVELYN MEDICARE</h2>
+        <p>Board-Certified Clinical Care | Abuja, Nigeria</p>
+        <p style="margin-top: 25px; opacity: 0.3;">&copy; 2026 Lovelyn Medicare Clinical Group. All Rights Reserved.</p>
     </footer>
 
     <script>
+        // Navbar scroll effect.
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             window.scrollY > 50 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
         });
 
-        // Secret Admin Entrance
+        // Secret Admin Entrance.
         let clicks = 0;
         let timer;
         document.getElementById('med-logo').addEventListener('click', (e) => {
@@ -170,7 +203,7 @@
             if (clicks > 1 && clicks < 5) e.preventDefault();
             if (clicks === 5) {
                 e.preventDefault();
-                window.location.href = "admin.html";
+                window.location.href = "auth.html"; // Redirects to your upgraded auth page
             }
             clearTimeout(timer);
             timer = setTimeout(() => { clicks = 0; }, 1500);
